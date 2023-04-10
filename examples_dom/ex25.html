@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Пример 25 - Журналы</title>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <th>№</th>
+      <th>Информация</th>
+      <th>1C</th>
+    </tr>
+  </table>
+  
+  <script src="../js/const.js"></script>
+  <script>
+		JOURNALS.forEach(function(item) {
+			let row = document.createElement('tr')
+			row.innerHTML = `
+			<td>${item[0]}</td>
+			<td>${item[1]}</td>
+			<td>${item[2] == 'yes' ? '<span style="color: #05da00">&#9746</span>' : item[2] == 'no' ? '<span style="color: red">&#9746;</span>' : item[2]}</td>
+			`
+			document.querySelector('table').append(row)
+		})
+  </script>
+</body>
+
+</html>

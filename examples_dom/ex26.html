@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Пример 26 - Таблица номеров</title>
+</head>
+
+<body>
+
+  <table></table>
+  
+  <script src="../js/const.js"></script>
+  <script>
+		for (let key in PHONE_NUMBER) {
+			let row = document.createElement('tr')
+			row.innerHTML = `<th colspan='2'>${key}</th>`
+			document.querySelector('table').append(row)
+			for(let i=0; i<PHONE_NUMBER[key].length; i++) {
+				let row = document.createElement('tr')
+				row.innerHTML = `
+				<td>${PHONE_NUMBER[key][i][0]}</td>
+				<td>${PHONE_NUMBER[key][i][1]}</td>
+				`
+				document.querySelector('table').append(row)
+			}
+	}
+  </script>
+</body>
+
+</html>

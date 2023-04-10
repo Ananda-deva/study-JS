@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Пример 21</title>
+</head>
+<body>
+
+  <div class="alert block">
+    <p>Сообщение</p>
+  </div>
+
+  <script>
+		let div = document.querySelector('div')
+		div.style.color = 'black'
+		div.style.width = '300px'
+		div.style.backgroundColor = prompt('Цвет', 'tomato')
+		div.style.display = 'none'
+		setTimeout(()=> div.style.display = '', 3000)
+		console.log(div.style.color)
+		let style = getComputedStyle(div)
+		console.log(style)
+  </script>
+</body>
+</html>

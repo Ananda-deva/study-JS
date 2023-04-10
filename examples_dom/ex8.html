@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пример 8</title>
+</head>
+<body>
+  
+  <p>Абзац текста</p>
+  <div>
+    <h3>Заголовок</h3>
+    <p>Текст</p>
+  </div>
+
+  <script>
+		let strs = ["Фамилия", "Имя", "Очество"]
+		document.querySelector('p').textContent = `
+			${strs[0]} - ${strs[1]} - ${strs[2]}
+		`
+		console.log(document.querySelector('div').innerHTML)
+  </script>
+</body>
+</html>
